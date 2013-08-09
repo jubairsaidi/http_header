@@ -11,6 +11,7 @@ Set the HTTP Headers for your template.
 * content_disposition - set a Content-Disposition (ex: attachment) with a filename
 * cache seconds - set to a non-zero number to set caching headers; set to 0 to force no-cache
 * terminate - set to "yes" to prevent any other output from the template
+* ssl - set to "yes" to force redirect to https if not already https.  et to "no" to force http if not already http.
 
 ## Examples
 
@@ -37,3 +38,7 @@ Set the Pragma, Cache-control, and Expires headers to set a 5 minute (300 second
 Set the Content-Language header to "en"
 
 	{exp:http_header content_language="en"}
+	
+Force https ssl="yes" or force http ssl="no".
+
+	{exp:http_header ssl="yes"}
